@@ -1,0 +1,44 @@
+    [{
+          "label": "个人信息",
+          "children": [{
+          	 "url":"/userCenter/info",
+            "label": "我的资料",
+            "auth": true
+          }]
+        },{
+          "label": "公司信息",
+          "children": [{
+             "url":"/userCenter/firmInfo",
+            "label": "广告主信息",
+            "auth": true
+          },{
+             "url":"/userCenter/mediaInfo",
+            "label": "媒体主信息",
+            "auth": true
+          }]
+        },{
+          "label": "咨询管理",
+          "children": [{
+          	 "url":"/userCenter/advisory",
+            "label": "咨询列表",
+            "auth": true
+          }]
+        }, {
+          "label": "产品管理",
+          "children": [{
+          	 "url":"/userCenter/pubMedia",
+            "label": "发布媒体",
+            "auth": true
+          }, {
+          	 "url":"/userCenter/dramaList",
+            "label": "产品列表",
+            "auth": true
+          }]
+          },{
+          "label": "设置",
+          "children": [{
+          	 "url":"/userCenter/safety",
+            "label": "安全中心",
+            "auth": false
+          }]
+        }]
