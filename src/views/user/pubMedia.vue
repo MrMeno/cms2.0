@@ -34,7 +34,6 @@
 				<span class='t2'>编剧</span>
 			</div>
 		   </div>
-
 		   <div class="row" style='padding-top:10px'>
 			<div class="col col-md-6 text-left">
 	       <el-select v-model="director" style='width:90%' multiple filterable allow-create  remote placeholder="请选择导演"  

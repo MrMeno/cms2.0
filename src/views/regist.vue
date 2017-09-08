@@ -656,7 +656,7 @@
       height:100px;
       line-height: 100px;
       font-size: 16px;
-      cursor: pointer
+       cursor: pointer
     }
     [v-cloak] {
   display: none;

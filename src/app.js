@@ -10,16 +10,16 @@ import Elements from '../public/css/element-ui'
 import{Notification} from '../public/css/element-ui'
 import getUrl from './directives/methods'
 
-Vue.use(Elements);
+ Vue.use(Elements);
 // mixin控制title显示
 // Vue.mixin(titleMixin);
 
 // 遍历加载全局过滤器
 Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key])
-})
+});
 
-const store = createStore()
+const store = createStore();
 const router = createRouter();
 
 
@@ -57,7 +57,7 @@ axios.interceptors.request.use(//请求拦截
         if(to.path==from.path){
           bread.splice(0,1);
           bread.push({url:'/main',name:'主页'});
-        }
+        } 
          bread.push({url:to.path,name:to.meta.name});
          store.commit('SET_BREAD',bread);
            if (to.path != '/main') 
@@ -76,8 +76,6 @@ axios.interceptors.request.use(//请求拦截
              }
            next()
        });
-
-
 // g构建即时store router工厂
 export function createApp() {
     sync(store, router)

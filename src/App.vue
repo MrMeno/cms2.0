@@ -71,6 +71,7 @@
       this.role=this.$store.state.role;
         // }
       this.getInfo(this.token);
+      console.log(this.$refs)
       this.$refs.tree.$children["0"].$children["0"].handleClick();
   },
     data(){

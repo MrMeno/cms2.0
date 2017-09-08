@@ -7,6 +7,9 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
+    externals: {
+        'Vue': 'window.Vue'
+    },
     devtool: isProd ?
         false : '#cheap-module-source-map',
     output: { //打包配置

@@ -18,9 +18,7 @@
      </div>
     </div>
     <div class="row">
-    <div class="col col-md-10 col-md-offset-1 text-center">  
-
-
+    <div class="col col-md-10 col-md-offset-1 text-center">
         <div class="row" style='padding:0px'>
           <div class="col col-md-3 col-sm-4 col-xs-4 col-lg-3" v-for='item in listData' style='cursor:pointer;padding:0px'>
             <div class="row" style="margin:10px;">
@@ -31,9 +29,9 @@
                     </div>
                 </div>
                 <div class="row">
-                  <div class="col col-md-12">
+                   <div class="col col-md-12">
                       <modules :labelList='item.adver_type_list'></modules>
-                  </div>
+                   </div>
                 </div>
                 <div class="row text-left" style='font-size:13px;padding-top:12px'>
                    <div class="col col-md-12">

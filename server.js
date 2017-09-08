@@ -7,9 +7,9 @@ const LRU = require('lru-cache')
 const express = require('express')
 const favicon = require('serve-favicon')
 const compression = require('compression')
- const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const resolve = file => path.resolve(__dirname, file)
+const resolve = file => path.resolve(    __dirname, file)
 const { createBundleRenderer } = require('vue-server-renderer')
 const isProd = process.env.NODE_ENV === 'production' //全局环境变量，当前为开发环境
 const useMicroCache = process.env.MICRO_CACHE !== 'false' //是否缓存
@@ -21,8 +21,8 @@ const serverInfo =
 const app = express()
 const template = fs.readFileSync(resolve('./src/index.template.html'), 'utf-8') //前端入口模板文件
  
-global.hostAddress = '192.168.1.200'; //106.14.60.53
-global.portNum = '80'; //8083
+global.hostAddress = '106.14.60.53';//106.14.60.53
+global.portNum = '8080'; //8083
 global.ctx = '/mmcms/api'; //mmcms
 
 function createRenderer(bundle, options) { //设置服务器端渲染参数
@@ -124,7 +124,7 @@ function render(req, res) {
             microCache.set(req.url, html)
         }
         if (!isProd) {
-            // console.log(`whole request: ${Date.now() - s}ms`)
+            //console.log(`whole request: ${Date.now()-s}ms`)
         }
     })
 }

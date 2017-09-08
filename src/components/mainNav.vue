@@ -189,7 +189,7 @@ import $ from 'jquery'
 export default {
   name: 'main-nav',
   props: [''],
-  mouted() {
+  mounted() {
     let self=this;
     console.log(this.$refs)
   },
